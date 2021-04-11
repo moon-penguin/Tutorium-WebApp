@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quidditch for Beginners</title>
+
+    <!-- Linking .css and .js file to html -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>Let the match begin, I guess</p>
+    <img src="./broom.svg" alt="Harry's first broom" width="80" id="broom" />
+
+    <script>
+      // Source: https://javascript.info/mouse-drag-and-drop#correct-positioning
+
+      broom.onmousedown = function (event) {
+        let shiftX = event.clientX - broom.getBoundingClientRect().left;
+        let shiftY = event.clientY - broom.getBoundingClientRect().top;
+
+        broom.style.position = "absolute";
+        broom.style.zIndex = 1000;
+        document.body.append(broom);
+
+        moveAt(event.pageX, event.pageY);
+
+        function moveAt(pageX, pageY) {
+          broom.style.left = pageX - shiftX + "px";
+          broom.style.top = pageY - shiftY + "px";
+        }
+
+        function onMouseMove(event) {
+          moveAt(event.pageX, event.pageY);
+        }
+
+        document.addEventListener("mousemove", onMouseMove);
+
+        broom.onmouseup = function () {
+          document.removeEventListener("mousemove", onMouseMove);
+          broom.onmouseup = null;
+        };
+      };
+
+      broom.ondragstart = function () {
+        return false;
+      };
+    </script>
+  </body>
+</html>
