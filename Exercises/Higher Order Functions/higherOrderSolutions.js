@@ -30,26 +30,32 @@ const characters = [
 ];
 
 // Map
-console.log(characters.map(val => val.height + 10));
+let allGrowingUp = characters.map(val => val.height + 10);
+console.log(allGrowingUp);
 
-console.log(characters.map(val => {
-    return val.name;
-}));
+let allCharNames = characters.map(val => val.name);
+console.log(allCharNames);
 
 // Filter
-console.log(characters.filter(val => val.height > 170));
+let charsTallerThanHarry = characters.filter(val => val.height > 170);
+console.log(charsTallerThanHarry);
 
-console.log(characters.filter(val => val.gender === 'female'));
+let allFemaleCharacters = characters.filter(val => val.gender === 'female');
+console.log(allFemaleCharacters);
 
 // Reduce
-console.log(characters.reduce((acc, curr) => {
-    return acc + curr.height;
-}, 0));
+let totalHeightOfAllCharacters = characters.reduce((accumulator, current) => {
+    return accumulator + current.height;
+}, 0)
+console.log(totalHeightOfAllCharacters);
 
 // Every
-console.log(characters.every(val => val.house === 'Gryffindor'));
+let isEveryoneGryffindor = characters.every(val => val.house === 'Gryffindor');
+console.log(isEveryoneGryffindor);
 
-console.log(characters.every(val => val.height >= 150));
+let isEveryoneTaller = characters.every(val => val.height >= 150)
+console.log(isEveryoneTaller);
 
 // Some
-console.log(characters.some(val => val.house === 'Gryffindor'));
+let someBelongToGryffindor = characters.some(val => val.house === 'Gryffindor');
+console.log(someBelongToGryffindor);

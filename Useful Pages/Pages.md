@@ -1,6 +1,6 @@
 ## JS Project Ideas
 
-- [JS Projects for Beginners](https://www.freecodecamp.org/news/javascript-projects-for-beginners/#how-to-create-a-faq-page)
+- [JS Projects for Beginners](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
 
 <br>
 
