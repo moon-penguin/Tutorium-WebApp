@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Table</title>
+  </head>
+  <body>
+    <h1>Create a magical table with JavaScript</h1>
+    <div id="magicTable"></div>
+
+    <script>
+      const characters = [
+        {
+          name: "Harry Potter",
+          height: 170,
+          eye_color: "green",
+          house: "Gryffindor",
+          gender: "male",
+        },
+        {
+          name: "Ron Weasley",
+          height: 185,
+          eye_color: "blue",
+          house: "Gryffindor",
+          gender: "male",
+        },
+        {
+          name: "Hermione Granger",
+          height: 165,
+          eye_color: "brown",
+          house: "Gryffindor",
+          gender: "female",
+        },
+        {
+          name: "Draco Malfoy",
+          height: 178,
+          eye_color: "grey",
+          house: "Slytherin",
+          gender: "male",
+        },
+      ];
+
+      function createMagicalTable(data) {
+        let table = document.createElement("table");
+        let fields = Object.keys(data[0]);
+
+        let headRow = document.createElement("tr");
+        fields.forEach((key) => {
+          let headCell = document.createElement("th");
+          headCell.appendChild(document.createTextNode(key));
+          headRow.appendChild(headCell);
+        });
+
+        table.appendChild(headRow);
+
+        data.forEach((obj) => {
+          let row = document.createElement("tr");
+
+          fields.forEach((key) => {
+            let cell = document.createElement("td");
+
+            cell.appendChild(document.createTextNode(obj[key]));
+            cell.style.textAlign = "center";
+            row.appendChild(cell);
+          });
+          table.appendChild(row);
+        });
+
+        return table;
+      }
+
+      document
+        .getElementById("magicTable")
+        .appendChild(createMagicalTable(characters));
+    </script>
+  </body>
+</html>
