@@ -8,8 +8,11 @@ over the div-box-element.
 
 <figure>
     <img src="Mouse_Coord_Event.png">
-    <figcaption>div element with border to display coordinates</figcaption>
+    <figcaption>
+    div element with border to display coordinates
+    </figcaption>
 </figure>
+
 
 **File to work with:**
 - index.html
