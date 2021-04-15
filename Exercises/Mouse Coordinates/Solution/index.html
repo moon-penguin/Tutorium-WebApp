@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mouse Coord</title>
+</head>
+<body>
+    <div class="box">
+        <p>Box to display mouse coordinates.</p>
+        <p>coord X:<span id="x">value</span></p>
+        <p>coord Y:<span id="y">value</span></p>
+    </div>
+
+    <script>
+        let box = document.querySelector('.box');
+        let x = document.getElementById('x');
+        let y = document.getElementById('y');
+
+        function displayCoords(event) {
+            x.innerText = event.pageX;
+            y.innerText = event.pageY;
+        }
+
+        box.addEventListener("mousemove", displayCoords, false);
+        box.addEventListener("mouseenter", displayCoords, false);
+        box.addEventListener("mouseleave", displayCoords, false);
+    </script>
+</body>
+</html>
