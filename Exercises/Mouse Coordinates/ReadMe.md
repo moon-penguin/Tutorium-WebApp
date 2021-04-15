@@ -7,12 +7,13 @@ You should be able to see the changing coordinates when you hover
 over the div-box-element.
 
 <figure>
-    <img src="Mouse_Coord_Event.png">
+    <img src="Mouse_Coord_Event.png"/>
     <figcaption>
     div element with border to display coordinates
     </figcaption>
 </figure>
 
+<br>
 
 **File to work with:**
 - index.html
