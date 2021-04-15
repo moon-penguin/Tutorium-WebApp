@@ -16,6 +16,10 @@ So, if you would click on the broom you should be able to
 move it with the mouse and if you let your mouse key go the
 broom stays in the last position you draged it.
 
+**Files to work with:**
+- index.html
+- broom.svg
+
 **Look up:**
 - mousedown
 - mouseup
