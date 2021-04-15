@@ -66,21 +66,21 @@ Table example in HTML: (build it with JS!)
 
 ```html
 <table>
-<tr>
-<th>name</th>
-<th>height</th>
-<th>eye_color</th>
-<th>house</th>
-<th>gender</th>
-</tr>
+  <tr>
+    <th>name</th>
+    <th>height</th>
+    <th>eye_color</th>
+    <th>house</th>
+    <th>gender</th>
+  </tr>
 
-<tr>
-<td>Harry Potter</td>
-<td>170</td>
-<td>green</td>
-<td>Gryffindor</td>
-<td>male</td>
-</tr>
+  <tr>
+    <td>Harry Potter</td>
+    <td>170</td>
+    <td>green</td>
+    <td>Gryffindor</td>
+    <td>male</td>
+  </tr>
 </table>
 
 ```
