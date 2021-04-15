@@ -60,6 +60,7 @@ Result of the magical table created with JS
 </figure>
 
 <br>
+<br>
 
 Table example in HTML: (build it with JS!)
 
