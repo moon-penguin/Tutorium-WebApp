@@ -26,6 +26,7 @@ After the explosion you should remove the event-listener and in the process you 
     <figcaption>at some point it should explode</figcaption>
 </figure>
 
+<br>
 
 **Tips:**
 
