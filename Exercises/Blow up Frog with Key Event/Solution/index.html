@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explosive Frog</title>
+</head>
+<body>
+    <h2>Is the frog getting bigger?</h2>
+    <p>🐸</p>
+
+    <script>
+        let frog = document.querySelector('p');
+        let frogSize = 20;
+
+        function setSize(size) {
+            frogSize = size;
+            frog.style.fontSize = frogSize + 'px';
+        }
+
+        function handleKeyEvent(event) {
+            if (event.key == "ArrowUp") {
+                if (frogSize >= 100) {
+                    frog.textContent = "💥";
+                    document.body.removeEventListener("keydown", handleKeyEvent);
+                } else {
+                    setSize(frogSize * 1.1);
+                    event.preventDefault();
+                }
+            } else if (event.key == "ArrowDown") {
+                setSize(frogSize * 0.9);
+                event.preventDefault();
+            }
+        }
+
+        document.body.addEventListener("keydown", handleKeyEvent);
+
+    </script>
+</body>
+</html>
