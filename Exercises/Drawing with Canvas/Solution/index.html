@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing with Canvas</title>
+</head>
+<body>
+    <h2>Drawing on canvas with mouse-event</h2>
+    <canvas id="canvas" width="500" height="400" style="border: 1px solid black;"></canvas>
+    <br>
+    <button id="clearButton">Clear Canvas</button>
+</body>
+
+<script>
+    let isDrawing = false;
+    let x = 0;
+    let y = 0;
+
+    let canvas = document.getElementById('canvas');
+    let context = canvas.getContext('2d');
+
+    let btn = document.getElementById('clearButton');
+
+    function drawLine(context, x1, y1, x2, y2) {
+        context.beginPath();
+        context.strokeStyle = 'black';
+        context.lineWidth = 1;
+
+        context.moveTo(x1, y1);
+        context.lineTo(x2, y2);
+        context.stroke();
+        context.closePath();
+    }
+
+    function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+
+    btn.addEventListener("click", event => {
+        clearCanvas();
+    });
+
+    canvas.addEventListener('mousedown', event => {
+        x = event.offsetX;
+        y = event.offsetY;
+        isDrawing = true;
+    });
+
+    canvas.addEventListener('mousemove', event => {
+        if (isDrawing) {
+            drawLine(context, x, y, event.offsetX, event.offsetY);
+            x = event.offsetX;
+            y = event.offsetY;
+        }
+    });
+
+    window.addEventListener('mouseup', event => {
+        isDrawing = false;
+        x = 0;
+        y = 0;
+    });
+</script>
+</html>
