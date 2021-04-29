@@ -38,6 +38,7 @@
 - [Git Tutorial von Atlassain](https://www.atlassian.com/de/git/tutorials)
 - [Github Guides](https://guides.github.com/)
 - [Offical Git Site with Pro Git (book)](https://git-scm.com/)
+- [How to write a git commit message](https://chris.beams.io/posts/git-commit/)
 
 ### Tutorials, Platforms for self-improvement/ learning
 
