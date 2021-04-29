@@ -20,12 +20,12 @@
 
 ### JavaScript
 
-- https://javascript.info/
+- [The Modern JavaScript Tutorial](https://javascript.info/)
 - [MDN JS Guide](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide)
 - [MDN JS Reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference)
 
 **Weiterführend zu JS:**
-- https://github.com/getify/You-Dont-Know-JS
+- [You Don't Know JS (Books Series)](https://github.com/getify/You-Dont-Know-JS)
 - [Eloquent JavaScript Book](https://eloquentjavascript.net/Eloquent_JavaScript.pdf)
 
 ### MarkDown
