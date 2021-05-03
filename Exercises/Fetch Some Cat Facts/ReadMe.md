@@ -43,6 +43,7 @@ There is an example how the response is structured so you are able to process it
 </figure>
 
 <br>
+<br>
 
 **After we click on the button**
 
