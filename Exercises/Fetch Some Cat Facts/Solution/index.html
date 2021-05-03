@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cats Everywhere</title>
+  </head>
+  <body>
+    <div>
+      <span id="facts">#CatFacts</span>
+      <button id="factBtn">Get some miau facts!</button>
+    </div>
+
+    <script>
+      let factBtn = document.getElementById("factBtn");
+      let factsField = document.getElementById("facts");
+
+      let url =
+        "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=2";
+
+      async function getFacts() {
+        try {
+          let response = await fetch(url);
+          return await response.json();
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      async function renderFacts() {
+        let facts = await getFacts();
+        factsField.innerText = facts[0].text;
+      }
+
+      factBtn.addEventListener("click", renderFacts, false);
+    </script>
+  </body>
+</html>
