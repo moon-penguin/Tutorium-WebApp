@@ -1,0 +1,22 @@
+body {
+  background-color: #eeeeee;
+}
+.angaben {
+  background-color: #e6e6e6;
+  width: 30%;
+}
+legend {
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f6f6f6;
+}
+.bmi {
+  display: inline-block;
+  text-align: center;
+  margin: 10px;
+}
+span {
+  display: block;
+  margin: 10px;
+  text-align: center;
+}

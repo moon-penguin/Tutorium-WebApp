@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width-device-width, initial-scale-1.0" />
+    <link rel="stylesheet" href="./stylesheet.css" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <h1>BMI-Rechner</h1>
+    <div class="angaben">
+      <form>
+        <fieldset>
+          <legend>Angaben zur BMI-Rechner</legend>
+          <div class="bmi">
+            <span>
+              <label for="gewicht">Gewicht</label>
+              <input type="number" name="gewicht" id="gewicht" required />
+            </span>
+            <span>
+              <label for="groesse">Größe</label>
+              <input type="number" name="groesse" id="groesse" required />
+            </span>
+          </div>
+          <div class="geschlecht">
+            <fieldset>
+              <legend>Geschlecht</legend>
+              <input type="radio" name="geschlecht" id="male" />
+              <label for="male">Männlich</label>
+              <input type="radio" name="geschlecht" id="female" />
+              <label for="female">Weiblich</label>
+              <input type="radio" name="geschlecht" id="divers" />
+              <label for="divers">Divers</label>
+            </fieldset>
+          </div>
+          <div class="bmi">
+            <span>
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="Name"
+                id="name"
+                placeholder="Max Muster"
+              />
+            </span>
+            <span>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                name="Email"
+                id="email"
+                placeholder="max.muster@gmail.com"
+              />
+            </span>
+          </div>
+          <div class="buttons">
+            <input type="submit" value="Absenden" />
+            <input type="reset" value="Zurücksetzen" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </body>
+</html>
