@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Ubung2.css">
+    <title>Body Mass Index</title>
+</head>
+<body>
+    <div class="head">
+        <h1>BMI-Rechner</h1>
+    </div>
+    <form action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php" method="GET">
+        <div class="angaben">
+            <fieldset>
+                <legend>Angaben zur BMI-Berechnung</legend>
+                <div class="input">
+                    <span class="label">
+                        <label for = "gewicht">Gewicht</label>
+                        <input type="number" name="gewicht" id="gewicht" required>
+                    </span>
+                    <span class="label">
+                        <label for = "groesse">Größe</label>
+                        <input type="number" name="groesse" id="groesse" required>
+                    </span>
+                </div>
+                <fieldset>
+                    <legend>Geschlecht</legend>
+                        <div class="radio">
+                            <input type="radio" name="geschlecht" id="male" required>
+                            <label for="maenlich">Männlich</label>
+                            <input type="radio" name="geschlecht" id="female">
+                            <label for="weiblich">Weiblich</label>
+                            <input type="radio" name="geschlecht" id="divers">
+                            <label for="divers">Divers</label>
+                        </div>
+                    </fieldset>
+                <div class="input">
+                    <span class="label">
+                        <label for = "name">Name</label>
+                        <input type="text" name="name" placeholder="Max Muster" id="name" required>    
+                    </span>
+                    <span class="label">
+                        <label for = "email">Email</label>
+                        <input type="email" name="email" id="email" placeholder="max.muster@gmail.com" required>
+                    </span>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Absenden">
+                    <input type="reset" value="Zurücksetzen">
+                </div>
+            </fieldset>
+        </div>
+    </form>
+    <div class="output">
+        <p>
+            Ihr Body Mass Index beträgt <span id="bmi">____</span>.
+        </p>
+    </div>
+</body>
+</html>
