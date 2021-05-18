@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+  }
+
+.innerContent {
+    display: flex;
+}
+
+.navigation {
+    display: table;
+    width: 25%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.mainContent {
+    width: 75%;
+    padding: 10px 20px 10px 20px;
+    border: 1px solid black;
+}
+
+.header, .footer {
+    background-color: gray;
+    padding: 20px;
+    border: 1px solid black;
+}
