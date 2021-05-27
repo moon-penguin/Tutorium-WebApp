@@ -30,12 +30,20 @@ let members = [
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 const groupSet = new Set();
 
-const table = document.getElementById("myTable");
+const button = document.getElementById("showMembers");
+const divTable = document.getElementById("myTable");
+const divGroup = document.getElementById("group");
 const ul = document.getElementById("myBullet");
+const table = document.createElement("table");
+
+button.onclick = () => createTable();
 
 const createTable = () => {
+  button.style.display = "none";
+  divGroup.style.display = "block";
   createTableHeader();
   createTableRows();
+  divTable.append(table);
 }
 
 const createTableHeader = () => {
@@ -111,7 +119,4 @@ const refreshGroupList = () => {
     ul.append(li)
   }
 }
-
-createTable();
-
 

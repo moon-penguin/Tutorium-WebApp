@@ -1,3 +1,7 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 table,
 td,
 th {
@@ -24,4 +28,8 @@ th::first-letter {
 
 button {
   margin: 0.5em;
+}
+
+#group {
+  display: none;
 }
