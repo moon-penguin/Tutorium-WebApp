@@ -1,0 +1,78 @@
+body {
+  background-color: #eeeeee;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+fieldset {
+  padding: 1em;
+  margin: 1em 0;
+}
+
+fieldset.outer {
+  background-color: #e6e6e6;
+  border: 1px solid #828282;
+}
+
+div > label {
+  display: inline-block;
+  width: 20%;
+  text-align: right;
+}
+
+.gender {
+  display: inline-block;
+}
+
+fieldset.inner {
+  background-color: #f6f6f6;
+}
+
+legend {
+  background-color: #f6f6f6;
+  border: 1px solid #6b6b6b;
+  border-radius: .25em;
+}
+
+label {
+  margin: 0.5em 0;
+}
+
+input {
+  margin: 1em 0 0 2em;
+}
+
+input[type=number] {
+  width: 6em;
+}
+
+input[type=text],
+input[type=email] {
+  width: 50%;
+  max-width: 25em;
+}
+
+#buttons {
+  float: right;
+  margin-top: 2em;
+  text-align: right;
+}
+
+#calculateBmi {
+  display: block;
+  margin: .5em;
+  margin-left: auto;
+}
+
+.button {
+  margin: .5em;
+}
+
+@media (max-width: 427px) {
+  .gender {
+    display: block;
+  }
+  
+  div > label {
+    text-align: left;
+  }
+}
