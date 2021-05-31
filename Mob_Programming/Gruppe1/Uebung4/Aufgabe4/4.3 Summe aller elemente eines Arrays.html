@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Summe alle elemente eines arrays</title>
+<script type="text/javascript">
+  function summe(arr)
+  {
+    let result =0;
+    for(let i=0;i<arr.length;i++)
+    {
+      result += arr[i];
+      //document.writeln("Debug" + arr[i]);
+    }
+    return result;
+  }
+  document.writeln('' + summe([1,2,3]));
+</script>
+</head>
+<body>
+
+</body>
+</html>

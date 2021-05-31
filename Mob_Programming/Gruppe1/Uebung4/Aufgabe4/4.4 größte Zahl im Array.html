@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>größte zahl im Array</title>
+</head>
+<script>
+
+    function great_Int(arr) {
+        let result = arr[0];
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] > result) {
+                result = arr[i];
+            }
+
+        }
+        return result;
+    }
+
+    document.writeln('' + great_Int([-2, 7, 5, 89, 6]));
+</script>
+<body>
+
+</body>
+</html>

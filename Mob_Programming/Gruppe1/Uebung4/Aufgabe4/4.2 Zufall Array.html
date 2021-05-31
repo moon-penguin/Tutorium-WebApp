@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zufall Array</title>
+</head>
+<script>
+  function fill_random_array(a,b,n)
+  {
+    let arr =new Array(n);
+    for (let i = 0; i < n ; i++)
+    {
+      arr[i] = Math.round(Math.random() * (b-a) + a) ;
+    }
+
+return arr;
+  }
+ //document.writeln(fill_random_array(-2,3,4));
+  document.writeln(fill_random_array(5,10,1));
+</script>
+<body>
+
+</body>
+</html>
