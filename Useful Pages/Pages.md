@@ -12,6 +12,10 @@
 - [HTML Cheat Sheet](https://overapi.com/html)
 - [HTML Reference](https://htmlreference.io/)
 
+#### HTML Forms (optional)
+- [Techniques for good user experience](https://www.smashingmagazine.com/2018/08/ux-html5-mobile-form-part-1/)
+- [7 best practices for buttons](https://www.uxmatters.com/mt/archives/2012/05/7-basic-best-practices-for-buttons.php)
+
 ### CSS
 
 - [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index)
