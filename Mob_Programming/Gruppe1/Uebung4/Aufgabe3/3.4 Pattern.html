@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Script</title>
+  <script>
+    function pattern(numLines) {
+      let string;
+      let kreuz;
+      let leer=' ';
+      kreuz = '+';
+        document.write("<pre>");
+        for (let j = 0; j < numLines; j++)
+        {
+            leer += ' ';
+        }
+      for (let i = 0; i < numLines ; i++)
+      {
+            string = '';
+            string = (string + "\n") + leer + kreuz;
+            document.write(string);
+            kreuz +='++';
+            leer = leer.substr(1);
+
+      }
+      document.write("</pre>");
+
+    }
+    pattern(35);
+  </script>
+</head>
+<body>
+
+</body>
+</html>
