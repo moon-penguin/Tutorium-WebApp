@@ -1,0 +1,64 @@
+body {
+  background-color: #fafafa;
+}
+
+form {
+  background-color: #eeeeee;
+  padding: 1em 0.5em;
+}
+
+fieldset {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+fieldset label {
+  flex-basis: 25%;
+  text-align: end;
+  padding-right: 0.5em;
+  margin-bottom: 1em;
+}
+
+fieldset .input {
+  flex-basis: 70%;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+img {
+  height: 17px;
+}
+
+img.hint {
+  padding-left: 0.5em;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#language {
+  border: none;
+  background-color: transparent;
+  float: right;
+}
+
+#submitContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+#submit {
+  margin-right: 1em;
+}
+
+@media (max-width: 385px) {
+  fieldset label {
+    flex-basis: 40%;
+  }
+
+  fieldset .input {
+    flex-basis: 50%;
+  }
+}

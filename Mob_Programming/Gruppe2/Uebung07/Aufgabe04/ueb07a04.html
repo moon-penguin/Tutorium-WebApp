@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="ueb07a04.js" defer></script>
+    <link rel="stylesheet" href="ueb07a04.css" />
+  </head>
+  <body>
+    <h1></h1>
+
+    <form action="" id="registration" method="post">
+      <button id="language">
+        <img src="img/german.jpg" alt="German Flag" id="flag" />
+      </button>
+      <p></p>
+      <fieldset>
+        <legend></legend>
+        <label for="user"></label>
+        <div class="input">
+          <input type="text" id="user" required />
+        </div>
+        <label for="password"></label>
+        <div class="input">
+          <input type="password" name="password" id="password" required />
+        </div>
+        <label for="passwordRepeat"></label>
+        <div class="input">
+          <input type="password" name="password" id="passwordRepeat" required />
+          <img src="" alt="" id="passwordHint" class="hint" />
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend></legend>
+        <label for="first"></label>
+        <div class="input">
+          <input type="text" name="firstName" id="first" required />
+        </div>
+        <label for="middle"></label>
+        <div class="input">
+          <input type="text" name="middleName" id="middle" />
+        </div>
+        <label for="last"></label>
+        <div class="input"><input type="text" name="lastName" id="last" /></div>
+        <label for="email"></label>
+        <div class="input">
+          <input type="email" name="email" id="email" />
+          <img src="" alt="" id="emailHint" class="hint" />
+        </div>
+      </fieldset>
+      <div id="submitContainer">
+        <input type="submit" value="Submit" id="submit" />
+        <span id="submitHint"></span>
+      </div>
+    </form>
+  </body>
+</html>
