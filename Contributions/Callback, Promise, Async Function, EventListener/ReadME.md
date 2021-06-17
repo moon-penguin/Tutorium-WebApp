@@ -92,7 +92,7 @@ Die Zustände, die eine Promise einnehmen kann sind:
 In der folgenden Übersicht sind neben den Zuständen von der Promise-Instanz auch die Funktions-Argumente `resolve` und `reject` ersichtlich.
 
 <figure>
-    <img src="States_of_a_Promise.png" alt="States of a Promise">
+    <img src="./Images/States_of_a_Promise.png" alt="States of a Promise">
     <figcaption>
         Zustände von einer Promise
     </figcaption>
@@ -109,7 +109,7 @@ Dieses Verhalten ähnelt dem vom `try...catch`-Block, das für die flow-control 
 In der folgenden Übersicht wird das sog. Promise-chaining gezeigt:
 
 <figure>
-    <img src="Promise_chaining.png" alt="Promise chaining">
+    <img src="./Images/Promise_chaining.png" alt="Promise chaining">
     <figcaption>
         Verkettung von Promises (promise chaining)
     </figcaption>
@@ -163,7 +163,7 @@ Mit Einführung von Async-Functions und ihrer Syntax `async/ await` gibt es eine
 Die Einfachheit dieser Notation ähnelt an das Schreiben von synchronen Funktionen und ist deshalb schnell und intuitiv einsetzbar.
 
 <figure>
-    <img src="callback_meme.jpg" alt="async meme" width="360px">
+    <img src="./Images/callback_meme.jpg" alt="async meme" width="360px">
     <figcaption>Next Level Async-Function Meme</figcaption>
 </figure>
 
@@ -278,7 +278,7 @@ Dabei wird das Verhalten bei der Bubbling & Capture Phase eines Events modifizie
 Die Phasen sind in diesem Schaubild ersichtlich:
 
 <figure>
-    <img src="Bubbling_and_Capture_Phase.png" alt="Bubbling Capture Schaubild" width="420px">
+    <img src="./Images/Bubbling_and_Capture_Phase.png" alt="Bubbling Capture Schaubild" width="420px">
     <figcaption>
         3 Phasen - Capture, Target, Bubbling
     </figcaption>
