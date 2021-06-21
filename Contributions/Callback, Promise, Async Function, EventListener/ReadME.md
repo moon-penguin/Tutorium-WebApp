@@ -19,6 +19,10 @@ Beachtet, dass man zwar beliebig viele Callback-Funktionen ineinander verschacht
 
 In diesem Zusammenhang gibt es den Begriff der [Callback Hell/ Pyramid of Doom](https://www.freecodecamp.org/news/how-to-deal-with-nested-callbacks-and-avoid-callback-hell-1bc8dc4a2012/) und Möglichkeiten wie man diese 'Hölle' umgehen kann.
 
+<br>
+
+**Kleiner Exkurs zu SOLID-Prinzipien**
+
 Allgemein ist es immer sinnvoll seine Funktionen so klein und einfach zu halten wie es möglich ist - gem. dem *Single Responibility Principle* aus den `SOLID`-Prinzipien.
 
 Beim Programmieren ist es ebenfalls zu empfehlen sich an die Vorgaben/ Erkenntnisse von `Clean Code` (Robert C. Martin) und `pragmatic Programming` (Andy Hunt, Dave Thomas) zu halten.
@@ -48,7 +52,7 @@ function person() {
 person();
 
 // Better
-let personalInfosOfHarryPotter = {
+let objectOfHarryPotter = {
     lastName: "Potter",
     firstName: "Harry",
     age: 50,
@@ -56,13 +60,13 @@ let personalInfosOfHarryPotter = {
     place: "Fulda"
 }
 
-function printObjectWithPersonalInfos(object) {
+function printKeyValuePairsOfObject(object) {
     Object.entries(object).forEach(([keyOfObject, valueOfObject]) => {
     	console.log(keyOfObject, valueOfObject);
     });
 }
 
-printObjectWithPersonalInfos(personalInfosOfHarryPotter);
+printKeyValuePairsOfObject(objectOfHarryPotter);
 ```
 
 <br>
@@ -74,6 +78,7 @@ printObjectWithPersonalInfos(personalInfosOfHarryPotter);
 - DigitalOcean: [SOLID Principles](https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
 - Medium: [Clean Code - Writing Functions or Methods](https://medium.com/swlh/clean-code-writing-functions-or-methods-4e6e53ff4ac2)
 - Refactoring Guru: [Refactoring Techniques](https://refactoring.guru/refactoring/techniques)
+- Youtube: [Seven Ineffective Habits of Programmers - Kevin Henney](https://www.youtube.com/watch?v=ZsHMHukIlJY&t=1395s)
 
 <br>
 
@@ -142,6 +147,22 @@ Ohne den Aufruf `resolveFunktion()` würde kein Funktionsaufruf erfolgen, womit 
 
 Mit Hilfe des Promise-Chaining ist der Programm-Code wesentlich leserlicher als mit verschachtelten Callbacks für eine asynchrone Behandlung von Funktionen.
 
+Ein weiteres Beispiel zeigt auf, wie man bewusst einen Error *throw* im `.catch`
+fangen und behandeln kann.
+
+Dabei bedienen wir uns zum Aufruf der `rejectFunction`, die den Zustand `rejected` eines Promises darstellt.
+
+**Bsp.:**
+```JavaScript
+let promise = new Promise((resolveFunction, rejectFunction) => {
+	setTimeout(() => rejectFunction(new Error('Catch me if you can!')), 1000);
+});
+
+promise.catch((err) => {
+	console.log(err.message); // Catch me if you can!
+});
+```
+
 
 <br>
 
@@ -198,11 +219,11 @@ Darüber hinaus gibt es in diesem Beispiel ein kleines Problem mit Asynchronitä
 
 Denn innerhalb der `sayHelloWorld()` Funktion wird zunächst auf die Rückgabe von der Promise für die Funktion `getHelloString()` gewartet bevor die Funktion `getWorldString()` ausgeführt wird.
 
-Um diese Aufrufe ebenfalls asynchron auszuführen, müssen sie in eine Promise gepackt werden.
+Damit diese Aufrufe nicht **nacheinander** ausgeführt werden, packen wir sie in einer Promise, die uns ermöglicht diese Aufrufe **parallel** auszuführen.
 
 Dabei bedienen wir uns der `Promise.all()` Methode und geben ein Array von Promises als Argument.
 
-Mit der destrukturierten Zuweisung (*destructuring assignment*) können wir die Ergebnisse aus dem Array von Promises unseren Variablen, wie es oben der Fall ist, zuweisen.
+Mit der destrukturierende Zuweisung (*destructuring assignment*) können wir die Ergebnisse aus dem Array von Promises unseren Variablen, wie es oben der Fall ist, zuweisen.
 
 **Bsp.:**
 
@@ -247,8 +268,7 @@ sayHelloWorld(); // Hello World
 
 # addEventListener
 
-Die `addEventListener` Funktion wird im Körper von JavaScript Programmen
-immer dann aufgerufen, wenn das jeweilige Event, das als erstes Parameter
+Die `addEventListener` Funktion wird immer dann aufgerufen, wenn das jeweilige Event, das als erstes Parameter
 der `addEventListener` Funktion übergeben wurde, getätigt wird.
 
 Die **Signatur** der `addEventListener` Funktion sieht folgendermaßen aus:
