@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  "use strict";
+
+  class Hund {
+    constructor(name, besitzer) {
+      this._name = name;
+      this._besitzer = besitzer;
+    }
+
+    bellen() {
+      console.log(this._name + " sagt: Wau wau wau!");
+    }
+  }
+
+  class Dackel extends Hund {
+    constructor(name, besitzer, club) {
+      super(name, besitzer);
+      this._club = club;
+    }
+
+    sageSpruch() {
+      console.log(this._besitzer + " sagt: Ordnung muss sein!");
+    }
+  }
+
+  class Boxer extends Hund {
+    constructor(name, besitzer, bissig) {
+      super(name, besitzer);
+      this._bissig = bissig;
+    }
+
+    nenneBeissverhalten() {
+      var prop = this._bissig ? "bissiger" : "lieber";
+      console.log("Ich bin ein " + prop+ " Hund.");
+    }
+  }
+
+  var waldi = new Dackel("Waldi", "Krause", "Teckel e.V.");
+  var prinz = new Boxer("Prinz", "Klitschko", "KGB", false);
+  waldi.bellen();
+  waldi.sageSpruch();
+  prinz.bellen();
+  prinz.nenneBeissverhalten();
+</script>
+</html>
