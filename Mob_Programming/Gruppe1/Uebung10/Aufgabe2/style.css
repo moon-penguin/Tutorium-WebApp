@@ -1,0 +1,50 @@
+body{
+    width: 600px;
+    background-color: #c6c6c6;
+    font-family: Arial, monospace;
+}
+#fildset1{
+    background-color: #bababa;
+}
+
+legend{
+    border:1px solid #003366;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+#radio{
+    text-align: center;
+}
+
+#fildset2{
+    background-color: #f0f0f0;
+}
+
+.centerForm {
+    margin: 0 auto;
+}
+
+input {
+    margin:20px 0px 0px 0px;
+}
+
+#button {
+    text-align: right;
+}
+
+#button2{
+    border-radius: 4px;
+}
+
+#fuerButton{
+    text-align: right;
+}
+
+button {
+    border-radius: 4px;
+}
+#texta {
+    display: block;
+    margin: 0 auto;
+}

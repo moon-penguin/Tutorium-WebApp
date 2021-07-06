@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Body Mass Index</title>
+</head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js" defer></script>
+
+
+<body id="body1">
+<h1>BMI-Rechner</h1>
+  <!-- <form id="form1"	action="https://vulcan.informatik.hs-fulda.de/bmi_berechnen.php	"	method="get">-->
+       <form id="form1"	action="http://localhost:8080/"	method="get">
+
+      <fieldset id="fildset1">
+        <legend>Angaben zur BMI-Berechnung</legend>
+      <table class="centerForm">
+        <tr>
+          <td><label for="gewicht">Gewicht</label></td>
+          <td><input type="number" id="gewicht" name="gewicht" value="" required></td>
+        </tr>
+        <tr>
+          <td><label for="groesse">Größe</label></td>
+          <td><input type="number" id="groesse" name="groesse" placeholder="m" value="" required></div></td>
+        </tr>
+      </table>
+    <fieldset id="fildset2">
+      <legend>Geschlecht</legend>
+
+      <div id="radio">
+
+          <input type="radio" id="Männlich" name="Geschlecht" value="Männlich" required>
+          <label for="Männlich">Männlich</label>
+          <input type="radio" id="Weiblich" name="Geschlecht" value="Weiblich" required>
+          <label for="Weiblich">Weiblich</label>
+          <input type="radio" id="Sonstiges" name="Geschlecht" value="Sonstiges" required>
+          <label for="Sonstiges">Sonstiges</label>
+
+      </div>
+
+    </fieldset>
+        <table class="centerForm">
+          <tr>
+            <td><label for="Name">Name</label></td>
+            <td><input type="" name="uname" id="Name" value="" placeholder="Max Mustermann" required></td>
+          </tr>
+          <tr>
+            <td><label for="Email">Email</label></td>
+            <td><input type="email" name="Email" id="Email" value="" placeholder="max.mustermann@gmail.com" required></div></td>
+          </tr>
+        </table>
+       <br>
+       <br>
+
+          <label for="texta" >Anmerkungen</label><textarea name="anmerk" id="texta" cols="30" rows="10" placeholder="tolle Seite hier :)"></textarea>
+    <br>
+    <div id="button">
+
+        <button type="button" id="subButton">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+
+    </div>
+      </fieldset>
+   </form>
+
+
+    <div id="fuerButton">
+        <button id="button2" type="submit" value="">BMI mit JS berechnen</button>
+    </div>
+
+
+
+  <p id="paragraph">Ihr Body Mass Index beträgt <span id="responseText">___</span>.</p>
+<script>
+    let subButton = document.getElementById("subButton");
+    subButton.addEventListener("click", fe);
+    let url = "http://localhost:8080";
+    function fe() {
+        let groesse = document.getElementById("groesse").value;
+        let gewicht = document.getElementById("gewicht").value;
+        url += `?groesse=${groesse}&gewicht=${gewicht}`;
+        let result = fetch(url, {
+            method: "get",
+            mode: "cors"
+        })
+        .then((response) => {
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById("responseText").innerText = data;
+        })
+        .catch(err => {
+            console.log(err);
+        });
+    }
+</script>
+</body>
+</html>
