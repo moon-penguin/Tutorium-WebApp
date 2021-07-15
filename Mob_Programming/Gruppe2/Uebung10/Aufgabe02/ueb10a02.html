@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="ueb10a02.css" />
+    <script src="ueb10a02.js" defer></script>
+    <title>ÜB10 A2</title>
+  </head>
+  <body>
+    <h1>BMI-Rechner</h1>
+
+    <form action="http://localhost:8080" method="GET" id="bmi">
+      <fieldset class="outer">
+        <legend>Angaben zur Berechnung</legend>
+        <div>
+          <label for="gewicht">Gewicht</label>
+          <input
+            type="number"
+            min="0"
+            max="500"
+            name="gewicht"
+            id="gewicht"
+            placeholder="in kg"
+          />
+        </div>
+        <div>
+          <label for="groesse">Größe</label>
+          <input
+            type="number"
+            min="0"
+            max="3"
+            step="0.01"
+            name="groesse"
+            id="groesse"
+            placeholder="in m"
+          />
+        </div>
+
+        <fieldset class="inner">
+          <legend>Geschlecht</legend>
+          <div class="gender">
+            <input type="radio" name="gender" id="female" />
+            <label for="female">Weiblich</label>
+          </div>
+          <div class="gender">
+            <input type="radio" name="gender" id="male" />
+            <label for="male">Männlich</label>
+          </div>
+          <div class="gender">
+            <input type="radio" name="gender" id="other" />
+            <label for="other">Sonstiges</label>
+          </div>
+        </fieldset>
+        <div>
+          <label for="user">Name</label>
+          <input type="text" name="user" id="user" placeholder="Max Muster" />
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="max.muster@gmail.com"
+          />
+        </div>
+        <div>
+          <label for="remark">Anmerkungen</label>
+          <textarea name="anmerk" id="remark" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="buttons">
+          <input type="submit" class="button" value="Absenden" />
+          <input type="reset" class="button" value="Zurücksetzen" />
+        </div>
+        <div class="buttons">
+          <input
+            type="button"
+            id="ajaxBmi"
+            value="BMI über Ajax holen (node.js)"
+            class="button"
+          />
+          <input
+            type="button"
+            id="calculateBmi"
+            value="BMI mit JS berechnen"
+            class="button"
+          />
+        </div>
+      </fieldset>
+    </form>
+    <p>
+      Ihr Body Mass Index beträgt
+      <span id="bmiValue">____</span>
+      .
+    </p>
+  </body>
+</html>

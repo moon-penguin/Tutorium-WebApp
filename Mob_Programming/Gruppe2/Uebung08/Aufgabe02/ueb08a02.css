@@ -1,0 +1,35 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table,
+td,
+th {
+  border: 1px solid black;
+}
+
+td,
+th {
+  padding: 0.5em;
+}
+
+th,
+tr:nth-child(even) {
+  background-color: #CCC;
+}
+
+tr:nth-child(odd) {
+  background-color: #EEE;
+}
+
+th::first-letter {
+  text-transform: uppercase;
+}
+
+button {
+  margin: 0.5em;
+}
+
+#group {
+  display: none;
+}
